@@ -1,0 +1,22 @@
+<div class="mb-5" >
+  <h1 class="text-xl mb-10">You are on DemandsSphere blog</h1>
+  <% if @articles.any? %>
+    <ul data-render-async class="flex flex-col space-y-3 ">
+      <% @articles.each do |article| %>
+        <li class="border border-gray-500 p-2 rounded-md">
+          <div class="text-lg"><%= article[:title] %></div>
+          <div class="font-bold">Published at: <%= article[:pub_date] %></div>
+          <p><%= article[:description].html_safe %></p>
+          <a href="
+          <%= article[:link] %>" 
+          target="_blank" 
+          class="underline underline-offset-2 decoration-sky-500">
+            Read more
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  <% else %>
+    <p>Sorry, no articles for now</p>
+  <% end %>
+</div>
