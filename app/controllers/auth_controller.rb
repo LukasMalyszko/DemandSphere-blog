@@ -3,7 +3,7 @@ require "uri"
 require "json"
 require "rest-client"
 require 'nokogiri'
-require "api_key.rb"
+require "./.api_key.rb"
 
 class AuthController < ApplicationController
   def index
