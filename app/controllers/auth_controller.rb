@@ -3,6 +3,7 @@ require "uri"
 require "json"
 require "rest-client"
 require 'nokogiri'
+require "api_key.rb"
 
 class AuthController < ApplicationController
   def index
@@ -17,11 +18,11 @@ class AuthController < ApplicationController
     password = params[:password]
 
     uri = URI("https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=
-              AIzaSyCrVZW4f3yYZnf-afNnC07ajBy95vbXO3I")
+              #{$api_key}")
 
     res = Net::HTTP.post_form(
-      uri, 
-      "email" => email, 
+      uri,
+      "email" => email,
       "password" => password
       )
 
@@ -37,11 +38,11 @@ class AuthController < ApplicationController
     password = params[:password]
 
     uri = URI("https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=
-              AIzaSyCrVZW4f3yYZnf-afNnC07ajBy95vbXO3I")
+              #{$api_key}")
 
     res = Net::HTTP.post_form(
-      uri, 
-      "email" => email, 
+      uri,
+      "email" => email,
       "password" => password
       )
 
@@ -63,7 +64,7 @@ class AuthController < ApplicationController
   url = "https://www.demandsphere.com/feed/"
   response = RestClient.get(url)
   xml = Nokogiri::XML(response.body)
-  
+
   articles = []
 
   xml.xpath('//item').each do |item|
@@ -91,7 +92,7 @@ end
 
     if session[:user_id]
        @articles = fetch_articles(5)
-      
+
     else
       redirect_to action: "index"
     end
