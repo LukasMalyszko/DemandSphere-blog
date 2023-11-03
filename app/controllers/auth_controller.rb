@@ -84,7 +84,7 @@ class AuthController < ApplicationController
     }
   end
 
-  articles.first(num)
+  articles.first(num).to_json
 end
 
 

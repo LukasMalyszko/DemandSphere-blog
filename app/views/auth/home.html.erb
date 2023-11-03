@@ -1,7 +1,7 @@
-<div class="mb-5" >
+<div id="articles-container" class="mb-5" >
   <h1 class="text-xl mb-10">You are on DemandsSphere blog</h1>
   <% if @articles.any? %>
-    <ul data-render-async class="flex flex-col space-y-3 ">
+    <ul  class="flex flex-col space-y-3 ">
       <% @articles.each do |article| %>
         <li class="border border-gray-500 p-2 rounded-md">
           <div class="text-lg"><%= article[:title] %></div>

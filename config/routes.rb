@@ -2,10 +2,12 @@ Rails.application.routes.draw do
   get 'auth/index'
   get 'auth/home'
   get '/signup', to: 'auth#signup'
+  get '/get_articles/:num', to: 'articles#get_articles'
 
-  
+
+
   root "auth#index"
-  
+
   get "/home", to: "auth#home"
 
   post "/login", to: "auth#login"
