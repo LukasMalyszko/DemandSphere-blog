@@ -38,4 +38,4 @@
 !/app/assets/builds/.keep
 
 
-.api_key.rb
+# .api_key.rb
