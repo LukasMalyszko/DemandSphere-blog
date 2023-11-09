@@ -100,6 +100,10 @@ GEM
       reline (>= 0.3.1)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
+    dotenv (2.8.1)
+    dotenv-rails (2.8.1)
+      dotenv (= 2.8.1)
+      railties (>= 3.2)
     drb (2.1.1)
       ruby2_keywords
     erubi (1.12.0)
@@ -270,10 +274,12 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
+  dotenv-rails
   feedjira
   ffi
   importmap-rails
   jbuilder
+  nokogiri (~> 1.15, >= 1.15.4)
   pg
   puma (>= 5.0)
   rails (~> 7.1.1)
