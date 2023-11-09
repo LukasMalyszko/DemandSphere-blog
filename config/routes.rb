@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'auth/index'
   get 'auth/home'
   get '/signup', to: 'auth#signup'
-  get '/get_articles/:num', to: 'articles#get_articles'
+  # get '/get_articles/:num', to: 'articles#get_articles'
 
 
 
@@ -13,6 +13,12 @@ Rails.application.routes.draw do
   post "/login", to: "auth#login"
   post "/signup", to: "auth#signup"
   post "/logout", to: "auth#logout"
+
+  require 'sidekiq/web'
+  mount Sidekiq::WEB => '/sidekiq'
+
+  # resources :articles, only: [:index]
+
 
   # get "/articles", to: "articles#get_articles "
 end

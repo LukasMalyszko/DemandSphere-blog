@@ -1,0 +1,6 @@
+:schedule:
+  fetch_articles:
+    cron: "* * * * *" # every minute
+    class: "ArticleFetcher"
+    queue: default
+    args: []
