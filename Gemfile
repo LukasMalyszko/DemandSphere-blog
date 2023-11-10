@@ -13,10 +13,10 @@ gem 'sprockets-rails'
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '>= 5.0'
 
-gem 'sidekiq'
+# gem 'sidekiq'
 
 
-gem 'sidekiq-cron', '~> 0.4.2'
+# gem 'sidekiq-cron', '~> 0.4.2'
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem 'importmap-rails'
@@ -29,6 +29,9 @@ gem 'stimulus-rails'
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem 'jbuilder'
+
+gem 'base64', '0.1.1'
+
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
@@ -85,4 +88,4 @@ group :test do
   gem 'selenium-webdriver'
 end
 
-gem "sidekiq-scheduler", "~> 5.0"
+# gem "sidekiq-scheduler", "~> 5.0"

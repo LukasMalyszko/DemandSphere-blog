@@ -14,8 +14,9 @@ Rails.application.routes.draw do
   post "/signup", to: "auth#signup"
   post "/logout", to: "auth#logout"
 
-  require 'sidekiq/web'
-  mount Sidekiq::WEB => '/sidekiq'
+  # require 'sidekiq/web'
+  # require 'sidekiq/crone/web'
+  # mount Sidekiq::WEB => '/sidekiq'
 
   # resources :articles, only: [:index]
 
