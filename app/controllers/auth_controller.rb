@@ -18,7 +18,7 @@ class AuthController < ApplicationController
     password = params[:password]
 
     uri = URI("https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=
-              #{ENV['API_KEY']}")
+    AIzaSyCrVZW4f3yYZnf-afNnC07ajBy95vbXO3I")
 
     res = Net::HTTP.post_form(
       uri,
@@ -36,7 +36,7 @@ class AuthController < ApplicationController
     password = params[:password]
 
     uri = URI("https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=
-      #{ENV['API_KEY']}")
+    AIzaSyCrVZW4f3yYZnf-afNnC07ajBy95vbXO3I")
 
     res = Net::HTTP.post_form(
       uri,
