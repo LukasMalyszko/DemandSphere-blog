@@ -1,5 +1,6 @@
-  # fetch_articles:
-  #   cron: "* * * * *" # every minute
-  #   class: "ArticleFetcher"
-  #   queue: default
-  #   args: []
+# config/schedule.yml
+
+test_job:
+  cron: "* * * * *" 
+  class: "TestJob"
+  queue: "default"
