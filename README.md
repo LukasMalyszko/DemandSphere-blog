@@ -1,24 +1,8 @@
 # README
+Demands Sphere Blog created for the needs of a recruitment task.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Connected to Postgres database. Fetching data from company feed site and displaying posts after login.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To create app image by docker use commands:
+    -docker-compose build
+    -docker-compose up
