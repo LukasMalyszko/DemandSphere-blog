@@ -2,9 +2,9 @@
 <%= form_with url: login_path, local: true, method: :post do%>
   <div class="space-y-2">
     <%= label_tag "email" %>
-    <%= email_field_tag "email", nil, class:"block flex-1 rounded-md border-1 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" %>
+    <%= email_field_tag "email", nil, class:"border-solid border-2 border-gray-900 block flex-1 rounded-md border-1 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" %>
     <%= label_tag "password" %>
-    <%= password_field_tag "password", nil, class:"block flex-1 rounded-md border-1 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" %>
+    <%= password_field_tag "password", nil, class:"border-solid border-2 border-gray-900 block flex-1 rounded-md border-1 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" %>
     <%= submit_tag "Login", class:"bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium " %>
   <% end %>
   <%= link_to "Register", signup_path, class:"bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" %>
