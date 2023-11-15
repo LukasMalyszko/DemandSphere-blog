@@ -5,14 +5,20 @@
     <ul  class="flex flex-col space-y-3 ">
       <% @articles.each do |article| %>
       
-        <li class="border border-gray-500 p-2 rounded-md">
-          <div class="text-lg"><%= article[:title]%></div>
-          <div class="font-bold">Published at: <%= article[:pub_date] %></div>
-          <p><%= article[:description].present? ? article[:description].html_safe  : '' %></p>
+        <li class="border border-gray-500 p-2 rounded-md flex flex-col">
+          <div class="mb-2">
+            <div class="text-lg"><%= article[:title]%></div>
+            <div class="font-bold">Published at: <%= article[:pub_date] %></div>
+            <p class="">
+              <%= article[:description].html_safe  %>
+            </p>
+          </div>
           <a href="
           <%= article[:link] %>" 
           target="_blank" 
-          class="underline underline-offset-2 decoration-sky-500">
+          class="py-2 px-4 bg-blue-500 text-white font-semibold 
+          rounded-lg shadow-md hover:bg-blue-700 focus:outline-none 
+          focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 self-end">
             Read more
           </a>
         </li>

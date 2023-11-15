@@ -20,10 +20,10 @@
         <div class="hidden sm:ml-6 sm:block">
           <div class="flex space-x-4 ">
             
-            <%= link_to "Blog", root_path, class:"bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" %>
+            <%= link_to "Blog", root_path, class:"cursor-pointer bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" %>
 
             <%= form_with url: logout_path, local: true, method: :post do%>
-            <%= submit_tag "Logout", class:"bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" %>
+            <%= submit_tag "Logout", class:"cursor-pointer bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" %>
             <% end %>
           </div>
         </div>
